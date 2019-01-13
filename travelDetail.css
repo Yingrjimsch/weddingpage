@@ -1,0 +1,263 @@
+*,
+:before,
+:after box-sizing border-box {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background: url(images/asia.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox_hidden {
+  background-color: #000000;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  visibility: hidden;
+  transition: all 1.5s ease;
+}
+
+.lightbox_visible {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.page__style {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 80%;
+  width: 80%;
+  margin: auto auto;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.page__description {
+  overflow-y: auto;
+  background: #00000075;
+  border-color: #ffffff;
+  color: #ffffff;
+  padding: 2%;
+  text-align: center;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  position: absolute;
+  border: solid 2px;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+.btn_nav {
+  background: #d3d3d3;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 120%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2%;
+  padding: 2% 3%;
+  width: 146px;
+  cursor: pointer;
+}
+
+.btn_nav:focus, .btn_nav:active {
+  outline: none;
+}
+
+.animate_content_visible {
+  animation: animate_visible 1.5s ease;
+}
+
+.animate_content_hidden {
+  animation: animate_hidden 1.5s ease;
+}
+
+.animate_content {
+  animation: animate_visible 1.5s ease;
+}
+
+@keyframes animate {
+  10% {
+    transform: scale(1, 0.002);
+  }
+  35% {
+    transform: scale(0.2, 0.002);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+  85% {
+    transform: scale(1, 0.002);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes animate_visible {
+  0% {
+    transform: scale(0, 0);
+  }
+  5% {
+    transform: scale(0.2, 0.002);
+  }
+  60% {
+    transform: scale(1, 0.002);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes animate_hidden {
+  25% {
+    transform: scale(1, 0.002);
+  }
+  75% {
+    transform: scale(0.2, 0.002);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.2, 0.002);
+    opacity: 0;
+  }
+}
+
+.nav_land:hover {
+  fill: #4d352b;
+}
+.nav_land {
+  cursor: pointer;
+  fill: #bc8f8f;
+}
+
+.no_nav_land {
+  cursor: pointer;
+  fill: #bc8f8f;
+  opacity: .6;
+}
+
+path {
+  cursor: not-allowed;
+}
+
+.fadeIn {
+  visibility: visible; 
+  z-index: 10;
+}
+
+/*  Japan 
+-----------------------------------*/
+.japan {
+  background: url(images/japan.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*  China
+-----------------------------------*/
+.china {
+  background: url(images/china.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*  Indien
+-----------------------------------*/
+.indien {
+  background: url(images/india.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*  Thailand
+-----------------------------------*/
+.thailand {
+  background: url(images/thailand.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*  Nepal
+-----------------------------------*/
+.nepal {
+  background: url(images/nepal.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.paths {
+  fill: none;
+  stroke: #ffffff;
+  stroke-dasharray: 2;
+  stroke-linejoin: round;
+  cursor: initial;
+}
+
+.mask {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: .8;
+  stroke-dasharray: 1000;
+  animation: dash 25s linear alternate ;
+}
+
+/* does not work in IE, need JS to animate there */
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
