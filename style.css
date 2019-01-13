@@ -100,19 +100,11 @@ body {
 .door_left_open {
   /*background: #00000080;*/
   transform: rotateY(45deg) scale(1.1);
-  
-  -webkit-opacity: 0.3;
-  -moz-opacity: 0.3;
-  opacity: 0.3;
 }
 
 .door_right_open {
   /*background: #00000080;*/
   transform: rotateY(-45deg) scale(1.1);
-  
-  -webkit-opacity: 0.3;
-  -moz-opacity: 0.3;
-  opacity: 0.3;
 }
 
 @font-face {

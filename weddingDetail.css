@@ -23,14 +23,16 @@ body{
 }
 
 .page__style {
-  position: absolute;
+  /*position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   height: 80%;
   width: 80%;
-  margin: auto auto;
+  */
+  height: 100%;
+  margin-right: 5%;
   overflow: hidden;
 }
 
@@ -38,13 +40,14 @@ body{
   background: #ffffff95;
   padding: 2%;
   text-align: center;
-  top: 10%;
+  /*top: 10%;
   left: 10%;
   right: 10%;
-  bottom: 10%;
-  position: absolute;
+  bottom: 10%;*/
+  /*position: absolute;*/
   border: solid 2px;
   overflow-y: auto;
+  height: 95%;
 }
 
 h1 {
@@ -56,9 +59,38 @@ p {
   font-size: 120%;
 }
 
+.container {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
 @media only screen and (max-width: 600px) {
   p {
     font-family: sans-serif;
     font-size: 100%;
+  }
+  .imgContainer {
+    display: none;
+  }
+  .page__style {
+    margin-right: 0%;
   }
 }
