@@ -15,7 +15,7 @@ html {
   overflow-y: hidden;
 }
 
-body{
+body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -32,7 +32,7 @@ body{
 }
 
 .lightbox_hidden {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, .95);
   opacity: 0;
   height: 100%;
   width: 100%;
@@ -63,7 +63,7 @@ body{
 
 .page__description {
   overflow-y: auto;
-  background: #00000075;
+  background: rgba(0, 0, 0, .75);
   border-color: #ffffff;
   color: #ffffff;
   padding: 2%;
@@ -101,7 +101,8 @@ p {
   cursor: pointer;
 }
 
-.btn_nav:focus, .btn_nav:active {
+.btn_nav:focus,
+.btn_nav:active {
   outline: none;
 }
 
@@ -179,7 +180,7 @@ p {
 .no_nav_land {
   cursor: pointer;
   fill: #bc8f8f;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 path {
@@ -187,7 +188,7 @@ path {
 }
 
 .fadeIn {
-  visibility: visible; 
+  visibility: visible;
   z-index: 10;
 }
 
@@ -252,9 +253,9 @@ path {
 .mask {
   fill: none;
   stroke: #ffffff;
-  stroke-width: .8;
+  stroke-width: 0.8;
   stroke-dasharray: 1000;
-  animation: dash 25s linear alternate ;
+  animation: dash 25s linear alternate 1;
 }
 
 /* does not work in IE, need JS to animate there */
@@ -272,4 +273,69 @@ path {
     font-family: sans-serif;
     font-size: 100%;
   }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInIcon {
+  fill: #ffffff;
+  opacity: 0; /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fadeInIcon.palmIcon {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.fadeInIcon.chineseWallIcon {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.fadeInIcon.himalayaIcon {
+  -webkit-animation-delay: 2.6s;
+  -moz-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+}
+
+.fadeInIcon.tajMahalIcon {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
 }
