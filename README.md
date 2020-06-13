@@ -1,13 +1,12 @@
 # Weddingpage
 
 &nbsp;
-This is the little homepage i did for my wedding.
+This is a little homepage I did for our big day.
 
 &nbsp;
-I added some information about the wedding and our honeymoon travel.
+I added some information about the wedding and our honeymoon journey.
 
 &nbsp;
 To make everything smooth and pretty I worked with css animations and some javascript.
-
-&nbsp;
-This website runs in german on [sarahgabriel.wedding](https://sarahgabriel.wedding) and in english on [sarahgabriel.wedding/en](https://sarahgabriel.wedding/en)
+##
+This website runs on german [hier](https://wedding.yingrjimsch.xyz) and on english [here](https://wedding.yingrjimsch/en)
